@@ -1,0 +1,500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kids_care
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20220418\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-12 06:18+0000\n"
+"PO-Revision-Date: 2022-09-12 06:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__age
+#: model:ir.model.fields,field_description:kids_care.field_res_users__age
+msgid "Age"
+msgstr "العمر"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__age_of_entering
+msgid "Age Of Entering"
+msgstr "عمر دخول الطالب الروضه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
+msgid "Amount With tax"
+msgstr "القيمه مع الضريبه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_tree_inherit
+msgid "Are you sure want to reset kid"
+msgstr "هل انت متاكد من اعاده تعيين الطالب"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+msgid "Are you sure want to take student to next level?"
+msgstr "هل انت متاكد من تحويل الطالب للفصل التالي"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__arr_child
+msgid "Arr Child"
+msgstr "ترتيب الطالب في الاسره"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Arraning the child in the family"
+msgstr "ترتيب الطالب في الاسره"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__behavior
+msgid "Behavior"
+msgstr "سلوك الطالب في المنزل"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Behavior of child in the home"
+msgstr "سلوك الطالب في المنزل"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.bills_action
+msgid "Bills"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__buds
+msgid "Buds"
+msgstr "براعم"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+msgid "Buds Level"
+msgstr "مستوي براعم"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__child_name
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Child Name"
+msgstr "اسم الطالب"
+
+#. module: kids_care
+#: model:ir.model,name:kids_care.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.costs_action
+msgid "Costs"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__birth_date
+#: model:ir.model.fields,field_description:kids_care.field_res_users__birth_date
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__disease
+msgid "Disease"
+msgstr "مرض"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+msgid "Docments"
+msgstr "الملفات"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Does the child suffer from any disease?"
+msgstr "هل يعاني الطفل من مرض"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__ex_grfa
+msgid "Ex Grfa"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__ex_grmo
+msgid "Ex Grmo"
+msgstr ""
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Exist grandfather at home?"
+msgstr "هل يوجد جد في المنزل"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Exist grandmother at home?"
+msgstr "هل يوجد جده في المنزل"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__fa_num
+msgid "Fa Num"
+msgstr ""
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Family"
+msgstr "الاسره"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__family_members
+msgid "Family Members"
+msgstr "عدد افراد الاسره"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__fa
+msgid "Father dead"
+msgstr "الاب ميت"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Father number"
+msgstr "رقم الاب"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__female
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__gender__female
+msgid "Female"
+msgstr "انثي"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__first
+msgid "First Level"
+msgstr "المستوي الاول"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__food_dislikes
+msgid "Food Dislikes"
+msgstr "طعام لا يحبه"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__food_likes
+msgid "Food Likes"
+msgstr "طعام يحبه"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__gender
+#: model:ir.model.fields,field_description:kids_care.field_res_users__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__house_num
+#: model:ir.model.fields,field_description:kids_care.field_res_users__house_num
+msgid "House Num"
+msgstr "رقم المنزل"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__id
+msgid "ID"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__imm
+msgid "Immigration"
+msgstr "اغتراب"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_product_product__info
+#: model:ir.model.fields,field_description:kids_care.field_product_template__info
+msgid "Info"
+msgstr "تفاصيل"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.invoices_action
+msgid "Invoices"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__is_child
+#: model:ir.model.fields,field_description:kids_care.field_res_users__is_child
+msgid "Is Child"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__is_has_relative
+msgid "Is Has Relative"
+msgstr "هل يعيش الطالب مع اقاربه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Is child live with other relatives?"
+msgstr "هل يعيش الطالب مع اقاربه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Is child sensitive to some food?"
+msgstr "هل لدي الطالب حساسيه من طعام"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Is child sensitive to some medicines?"
+msgstr "هل لدي الطالب حساسيه من طعام"
+
+#. module: kids_care
+#: model:ir.model,name:kids_care.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__a
+msgid "Kids"
+msgstr "الاطفال"
+
+#. module: kids_care
+#: model:ir.ui.menu,name:kids_care.kids_root_menu
+msgid "Kids Care"
+msgstr "كيدس كير"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__male
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__mo_num
+msgid "Mo Num"
+msgstr "رقم الام"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Mother number"
+msgstr "رقم الام"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_kids_class__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+msgid "Next Level"
+msgstr "المستوي التالي"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__occup
+msgid "Occup"
+msgstr "الوظيفه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Occupation"
+msgstr "الوظيفه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Other"
+msgstr "اخري"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
+#: model_terms:ir.ui.view,arch_db:kids_care.tree_product_template_inherit
+msgid "Price"
+msgstr "السعر"
+
+#. module: kids_care
+#: model:ir.model,name:kids_care.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__re_add
+msgid "Re Add"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__re_num
+msgid "Re Num"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.actions.report,name:kids_care.regester_form
+msgid "Regester Form"
+msgstr "استماره التسجيل"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.register_action
+msgid "Registers"
+msgstr "التسجيلات"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__relation_between
+msgid "Relation Between"
+msgstr "العلاقه بين الابوين"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Relative Address"
+msgstr "عنوان"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Relative Phone"
+msgstr "رقم الهاتف"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Relatives"
+msgstr "الاقارب"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_tree_inherit
+msgid "Reset"
+msgstr "اعاده تعيين"
+
+#. module: kids_care
+#: model:ir.model,name:kids_care.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__scare
+msgid "Scare"
+msgstr "خوف"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__second
+msgid "Second Level"
+msgstr "المستوي الثاني"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__sens_food
+msgid "Sens Food"
+msgstr "الطعام"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__sens_med
+msgid "Sens Med"
+msgstr "الدواء"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__sep
+msgid "Separation"
+msgstr "منفصلين"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Services"
+msgstr "الخدمات"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__sta
+msgid "Stable"
+msgstr "مستقره"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__stage
+#: model:ir.model.fields,field_description:kids_care.field_res_users__stage
+msgid "Stage"
+msgstr "المراحل"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.student_action
+#: model:ir.ui.menu,name:kids_care.student_menu
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "The Food he dislikes"
+msgstr "الطعام الذي يكره"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "The Food he likes"
+msgstr "الطعام الذي يحبه"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "Things that scare him"
+msgstr "اشياء تخيفه"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__wh_food
+msgid "Wh Food"
+msgstr "الطعام"
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__wh_med
+msgid "Wh Med"
+msgstr "الدواء"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "What is?"
+msgstr "ما هو"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "a Realtion between the couples"
+msgstr "العلاقه بين الابوين"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
+msgid "any more details"
+msgstr "اي تفاصيل اضافيه"
+
+#. module: kids_care
+#: model:ir.model,name:kids_care.model_kids_class
+msgid "kids.class"
+msgstr ""
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
+msgid "last Level"
+msgstr "المستوي الاخير"
+
+#. module: kids_care
+#: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__mo
+msgid "mother dead"
+msgstr "موت الام"
+
+#. module: kids_care
+#: model:ir.actions.report,print_report_name:kids_care.regester_form
+msgid "name"
+msgstr "الاسم"

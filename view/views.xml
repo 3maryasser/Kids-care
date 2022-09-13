@@ -1,0 +1,266 @@
+<odoo>
+    <data>
+    <!-- xml actions -->
+        <record id="register_action" model="ir.actions.act_window">
+            <field name="name">Registers</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="student_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">res.partner</field>
+            <field name="context">{'group_by': 'stage'}</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+        <record id="costs_action" model="ir.actions.act_window">
+            <field name="name">Costs</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+        <record id="invoices_action" model="ir.actions.act_window">
+            <field name="name">Invoices</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('move_type', '=', 'out_invoice')]</field>
+            <field name="context">{'default_move_type': 'out_invoice'}</field>
+        </record>
+        <record id="bills_action" model="ir.actions.act_window">
+            <field name="name">Bills</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('move_type', '=', 'in_invoice')]</field>
+            <field name="context">{'default_move_type': 'in_invoice'}</field>
+        </record>          
+        <!-- xml views  -->
+    
+        
+
+        <record id="form_sale_order_inherit" model="ir.ui.view">
+			<field name="name">sale.order.inherit</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+                <field name="partner_id" position="attributes">
+                    <attribute name="string">Child Name</attribute>
+                </field>
+                <field name="state" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="validity_date" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="payment_term_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="note" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="date_order" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <xpath expr="//notebook/page[3]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="attributes">
+                    <attribute name="string">Services</attribute>
+                </xpath>
+                <group>
+                    <group>
+                        <h1>Family</h1>
+                        <field name="relation_between" string="a Realtion between the couples"/>
+                        <field name="fa_num" string="Father number" widget="phone"/>
+                        <field name="mo_num" string="Mother number" widget="phone"/>
+                        <field name="family_members" />
+                        <field name="male"/>
+                        <field name="female"/>
+                    </group>
+                    <group>
+                        <h1>Relatives</h1>
+                        <field name="is_has_relative" string="Is child live with other relatives?"/>
+                        <field name="occup" string="Occupation" attrs="{'invisible': [('is_has_relative', '=', False)]}"/>
+                        <field name="re_add" string="Relative Address" attrs="{'invisible': [('is_has_relative', '=', False)]}"/>
+                        <field name="re_num" string="Relative Phone" attrs="{'invisible': [('is_has_relative', '=', False)]}"/>
+                    </group>
+                    <group>
+                        <h1>Other</h1>
+                        <field name="arr_child" string="Arraning the child in the family"/>
+                        <field name="sens_med" string="Is child sensitive to some medicines?"/>
+                        <field name="wh_med" string="What is?" attrs="{'invisible': [('sens_med', '=',False)]}"/>
+                        <field name="sens_food" string="Is child sensitive to some food?"/>
+                        <field name="wh_food" string="What is?" attrs="{'invisible': [('sens_food', '=',False)]}"/>
+                        <field name="food_likes" string="The Food he likes"/>
+                        <field name="food_dislikes" string="The Food he dislikes"/>
+                        <field name="disease" string="Does the child suffer from any disease?"/>
+                        <field name="behavior" string="Behavior of child in the home"/>
+                        <field name="scare" string="Things that scare him"/>
+                        <field name="ex_grmo" string="Exist grandmother at home?"/>
+                        <field name="ex_grfa" string="Exist grandfather at home?"/>
+                    </group>
+                </group>
+    
+            </field>
+        </record>
+        <!-- <record id="tree_sale_order_inherit" model="ir.ui.view">
+			<field name="name">sale.order.inherit</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_tree"/>
+			<field name="arch" type="xml">
+                
+            </field>
+        </record> -->
+        <record id="view_partner_tree_inherit" model="ir.ui.view">
+			<field name="name">res.partner.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree"/>
+			<field name="arch" type="xml">
+                <tree>
+                    <header>
+                        <button name="action_reset" string="Reset" type="object" class="btn btn-secondary" confirm="Are you sure want to reset kid"/>
+                    </header>
+                </tree>
+            </field>
+        </record>
+        <!-- <record id="view_partner_kanban_inherit" model="ir.ui.view">
+			<field name="name">res.partner.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_kanban_view"/>
+			<field name="arch" type="xml">
+                <kanban>
+                    <field name="stage" position="attributes">
+                        <attribute name="invisible">True</attribute>
+                    </field>
+                </kanban>
+            </field>
+        </record> -->
+
+        <record id="view_partner_form_inherit" model="ir.ui.view">
+			<field name="name">res.partner.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="action_buds" string="Buds Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('buds','first', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
+                        <button name="action_level_one" string="Next Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('a','first', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
+                        <button name="action_level_two" string="last Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('buds','a', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
+                        <button name="action_reset" string="Reset" type="object" class="btn btn-secondary" confirm="Are you sure want to reset kid"/>
+                        <field name="stage" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                </xpath>
+                <xpath expr="//sheet/div/button[1]" position="replace">
+                    <button class="oe_stat_button" type="object" name="action_view_sale_order" groups="sales_team.group_sale_salesman" icon="fa-book">
+                        <field string="Docments" name="sale_order_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+                <field name="type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="parent_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="company_type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="vat" position="replace">
+                    <field name="house_num"/>
+                    <field name="is_child" invisible="True"/>
+                </field>
+                <field name="function" position="replace">
+                    <field name="birth_date" attrs="{'invisible': [('is_child', '=', False)]}"/>
+                    <field name="age"/>
+                </field>
+                <field name="type" position="after">
+                    <field name="gender" attrs="{'invisible': [('is_child', '=', False)]}"/>
+                </field>
+                <field name="website" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="title" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="category_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <xpath expr="//notebook/page[1]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[3]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="form_product_template_inherit" model="ir.ui.view">
+			<field name="name">product.template.inherit</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_only_form_view"/>
+			<field name="arch" type="xml">
+                <xpath expr="//form" position="replace">
+                    <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                                <group>
+                                    <field name="list_price" string="Price"/>
+                                    <field name="tax_string" string="Amount With tax"/>
+                                </group>
+                                <group>
+                                    <field name="taxes_id" widget="many2many_tags"/>
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Details" placeholder="any more details">
+                                    <field name="info"/>
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+                </xpath>
+            </field>
+        </record>
+        <record id="tree_product_template_inherit" model="ir.ui.view">
+			<field name="name">product.template.inherit</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_tree_view"/>
+			<field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree>
+                        <field name="name"/>
+                        <field name="list_price" string="Price"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="form_account_move_inherit" model="ir.ui.view">
+			<field name="name">account.move.inherit</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form"/>
+			<field name="arch" type="xml">
+                <field name="partner_id" position="replace">
+                    <field name="partner_id" widget="res_partner_many2one" nolabel="1" domain="[('is_child','=',False)]" context="{                                             'res_partner_search_mode': (context.get('default_move_type', 'entry') in ('out_invoice', 'out_refund', 'out_receipt') and 'customer') or (context.get('default_move_type', 'entry') in ('in_invoice', 'in_refund', 'in_receipt') and 'supplier') or False,                                             'show_address': 1, 'default_is_company': True, 'show_vat': True,'default_is_child': False}" options="{&quot;always_reload&quot;: True, &quot;no_quick_create&quot;: True}" attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                </field>
+            </field>
+        </record>
+
+        
+
+
+
+
+    <menuitem name="Kids Care"  id="kids_root_menu" web_icon="kids_ care,static/description/icon.png"/>
+    <!-- <menuitem name="Registers" id="register_menu" action="register_action" parent="kids_root_menu" sequence="1"/> -->
+    <menuitem name="Students" id="student_menu" action="student_action" parent="kids_root_menu" sequence="2"/>
+    <!-- <menuitem name="Financial" id="fin_menu" parent="kids_root_menu" sequence="4"/>
+    <menuitem name="Costs" id="class_menu" action="costs_action" parent="fin_menu" sequence="5"/>
+    <menuitem name="Invoices" id="invoice_menu" action="invoices_action" parent="fin_menu" sequence="5"/>
+    <menuitem name="Bills" id="bill_menu" action="bills_action" parent="fin_menu" sequence="6"/> -->
+    </data>
+</odoo>

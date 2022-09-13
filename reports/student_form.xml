@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <!-- <record id="regester_form" model="ir.actions.report">
+            <field name="name">Form</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kids_care.regester_report_temp</field>
+            <field name="report_file">regester_report_temp</field>
+            <field name="print_report_name">'Order - %s' % object.name</field>
+            <field name="binding_model_id" ref="model_regester_form"/>
+            <field name="binding_type">report</field>
+        </record> -->
+        <report id="regester_form"
+                model="sale.order"
+                name="kids_care.regester_report_temp"
+                string="Regester Form"    
+                file="regester.form_student"
+                report_type="qweb-pdf"/>
+        <template id="regester_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="form">
+                            <h1 t-field="form.partner_id"/>
+                            <p t-field="form.date_order"/>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
