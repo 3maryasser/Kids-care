@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0-20220418\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 06:18+0000\n"
-"PO-Revision-Date: 2022-09-12 06:18+0000\n"
+"POT-Creation-Date: 2022-10-11 19:47+0000\n"
+"PO-Revision-Date: 2022-10-11 19:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,17 +30,6 @@ msgstr "عمر دخول الطالب الروضه"
 #: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
 msgid "Amount With tax"
 msgstr "القيمه مع الضريبه"
-
-#. module: kids_care
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_tree_inherit
-msgid "Are you sure want to reset kid"
-msgstr "هل انت متاكد من اعاده تعيين الطالب"
-
-#. module: kids_care
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-msgid "Are you sure want to take student to next level?"
-msgstr "هل انت متاكد من تحويل الطالب للفصل التالي"
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__arr_child
@@ -69,13 +58,9 @@ msgstr ""
 
 #. module: kids_care
 #: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__buds
+#: model:product.template,name:kids_care.buds_level
 msgid "Buds"
 msgstr "براعم"
-
-#. module: kids_care
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-msgid "Buds Level"
-msgstr "مستوي براعم"
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__child_name
@@ -90,18 +75,9 @@ msgstr "جهة الاتصال"
 
 #. module: kids_care
 #: model:ir.actions.act_window,name:kids_care.costs_action
+#: model:ir.ui.menu,name:kids_care.class_menu
 msgid "Costs"
-msgstr ""
-
-#. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__create_uid
-msgid "Created by"
-msgstr ""
-
-#. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__create_date
-msgid "Created on"
-msgstr ""
+msgstr "التكاليف"
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_res_partner__birth_date
@@ -120,11 +96,6 @@ msgid "Disease"
 msgstr "مرض"
 
 #. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__display_name
-msgid "Display Name"
-msgstr ""
-
-#. module: kids_care
 #: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
 msgid "Docments"
 msgstr "الملفات"
@@ -133,6 +104,11 @@ msgstr "الملفات"
 #: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
 msgid "Does the child suffer from any disease?"
 msgstr "هل يعاني الطفل من مرض"
+
+#. module: kids_care
+#: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
+msgid "EX-249912345678"
+msgstr ""
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__ex_grfa
@@ -157,6 +133,11 @@ msgstr "هل يوجد جده في المنزل"
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__fa_num
 msgid "Fa Num"
+msgstr ""
+
+#. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__fa_occup
+msgid "Fa Occup"
 msgstr ""
 
 #. module: kids_care
@@ -186,7 +167,13 @@ msgid "Female"
 msgstr "انثي"
 
 #. module: kids_care
+#: model:ir.ui.menu,name:kids_care.fin_menu
+msgid "Financial"
+msgstr "الماليه"
+
+#. module: kids_care
 #: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__first
+#: model:product.template,name:kids_care.first_level
 msgid "First Level"
 msgstr "المستوي الاول"
 
@@ -203,6 +190,7 @@ msgstr "طعام يحبه"
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_res_partner__gender
 #: model:ir.model.fields,field_description:kids_care.field_res_users__gender
+#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
 msgid "Gender"
 msgstr "الجنس"
 
@@ -211,11 +199,6 @@ msgstr "الجنس"
 #: model:ir.model.fields,field_description:kids_care.field_res_users__house_num
 msgid "House Num"
 msgstr "رقم المنزل"
-
-#. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__id
-msgid "ID"
-msgstr ""
 
 #. module: kids_care
 #: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__imm
@@ -260,6 +243,12 @@ msgid "Is child sensitive to some medicines?"
 msgstr "هل لدي الطالب حساسيه من طعام"
 
 #. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_product_product__isclass
+#: model:ir.model.fields,field_description:kids_care.field_product_template__isclass
+msgid "Isclass"
+msgstr ""
+
+#. module: kids_care
 #: model:ir.model,name:kids_care.model_account_move
 msgid "Journal Entry"
 msgstr "قيد اليومية"
@@ -275,19 +264,14 @@ msgid "Kids Care"
 msgstr "كيدس كير"
 
 #. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class____last_update
-msgid "Last Modified on"
+#: model:res.groups,name:kids_care.care_group
+msgid "Kids admin"
 msgstr ""
 
 #. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__write_uid
-msgid "Last Updated by"
-msgstr ""
-
-#. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__write_date
-msgid "Last Updated on"
-msgstr ""
+#: model:ir.module.category,name:kids_care.kids_category
+msgid "Kids care"
+msgstr "كيدس كير"
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__male
@@ -301,19 +285,14 @@ msgid "Mo Num"
 msgstr "رقم الام"
 
 #. module: kids_care
+#: model:ir.model.fields,field_description:kids_care.field_sale_order__mo_occup
+msgid "Mo Occup"
+msgstr ""
+
+#. module: kids_care
 #: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
 msgid "Mother number"
 msgstr "رقم الام"
-
-#. module: kids_care
-#: model:ir.model.fields,field_description:kids_care.field_kids_class__name
-msgid "Name"
-msgstr "الاسم"
-
-#. module: kids_care
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-msgid "Next Level"
-msgstr "المستوي التالي"
 
 #. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__occup
@@ -329,6 +308,12 @@ msgstr "الوظيفه"
 #: model_terms:ir.ui.view,arch_db:kids_care.form_sale_order_inherit
 msgid "Other"
 msgstr "اخري"
+
+#. module: kids_care
+#: model:ir.actions.act_window,name:kids_care.other_cost_action
+#: model:ir.ui.menu,name:kids_care.other_menu
+msgid "Other Cost"
+msgstr "التكاليف الاخرى"
 
 #. module: kids_care
 #: model_terms:ir.ui.view,arch_db:kids_care.form_product_template_inherit
@@ -382,12 +367,6 @@ msgid "Relatives"
 msgstr "الاقارب"
 
 #. module: kids_care
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-#: model_terms:ir.ui.view,arch_db:kids_care.view_partner_tree_inherit
-msgid "Reset"
-msgstr "اعاده تعيين"
-
-#. module: kids_care
 #: model:ir.model,name:kids_care.model_sale_order
 msgid "Sales Order"
 msgstr "أمر البيع"
@@ -399,6 +378,7 @@ msgstr "خوف"
 
 #. module: kids_care
 #: model:ir.model.fields.selection,name:kids_care.selection__res_partner__stage__second
+#: model:product.template,name:kids_care.second_level
 msgid "Second Level"
 msgstr "المستوي الثاني"
 
@@ -455,6 +435,13 @@ msgid "Things that scare him"
 msgstr "اشياء تخيفه"
 
 #. module: kids_care
+#: model:product.template,uom_name:kids_care.buds_level
+#: model:product.template,uom_name:kids_care.first_level
+#: model:product.template,uom_name:kids_care.second_level
+msgid "Units"
+msgstr ""
+
+#. module: kids_care
 #: model:ir.model.fields,field_description:kids_care.field_sale_order__wh_food
 msgid "Wh Food"
 msgstr "الطعام"
@@ -480,14 +467,9 @@ msgid "any more details"
 msgstr "اي تفاصيل اضافيه"
 
 #. module: kids_care
-#: model:ir.model,name:kids_care.model_kids_class
-msgid "kids.class"
-msgstr ""
-
-#. module: kids_care
 #: model_terms:ir.ui.view,arch_db:kids_care.view_partner_form_inherit
-msgid "last Level"
-msgstr "المستوي الاخير"
+msgid "khartoum,bahri"
+msgstr "الخرطوم,بحري"
 
 #. module: kids_care
 #: model:ir.model.fields.selection,name:kids_care.selection__sale_order__relation_between__mo
@@ -495,6 +477,7 @@ msgid "mother dead"
 msgstr "موت الام"
 
 #. module: kids_care
-#: model:ir.actions.report,print_report_name:kids_care.regester_form
-msgid "name"
-msgstr "الاسم"
+#: model:ir.model.fields,field_description:kids_care.field_res_partner__files
+#: model:ir.model.fields,field_description:kids_care.field_res_users__files
+msgid "upload File"
+msgstr "الرقم الوطني او الجواز"

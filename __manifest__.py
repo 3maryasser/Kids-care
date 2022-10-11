@@ -9,6 +9,7 @@
 	"data" : ["view/views.xml",
 				"reports/student_form.xml",
 				"security/security.xml",
-				"security/ir.model.access.csv"],
+				"security/ir.model.access.csv",
+			  "data/data.xml"],
 	"application" : True
 }

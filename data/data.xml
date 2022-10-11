@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="buds_level" model="product.template">
+            <field name="name">Buds</field>
+            <field name="isclass">True</field>
+        </record>
+        <record id="first_level" model="product.template">
+            <field name="name">First Level</field>
+            <field name="isclass">True</field>
+        </record>
+        <record id="second_level" model="product.template">
+            <field name="name">Second Level</field>
+            <field name="isclass">True</field>
+        </record>
+    </data>
+</odoo>
