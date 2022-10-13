@@ -130,13 +130,15 @@
     
             </field>
         </record>
-        <!-- <record id="tree_sale_order_inherit" model="ir.ui.view">
-			<field name="name">sale.order.inherit</field>
-			<field name="model">sale.order</field>
-			<field name="inherit_id" ref="sale.view_order_tree"/>
-			<field name="arch" type="xml">
-            </field>
-        </record> -->
+<!--        <record id="tree_sale_order_inherit" model="ir.ui.view">-->
+<!--			<field name="name">sale.order.inherit</field>-->
+<!--			<field name="model">sale.order</field>-->
+<!--			<field name="inherit_id" ref="sale.view_order_tree"/>-->
+<!--			<field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
         <!-- <record id="view_partner_tree_inherit" model="ir.ui.view">
 			<field name="name">res.partner.inherit</field>
 			<field name="model">res.partner</field>
@@ -176,7 +178,7 @@
                 </xpath>
                 <xpath expr="//sheet/div/button[1]" position="replace">
                     <button class="oe_stat_button" type="object" name="action_view_sale_order" groups="sales_team.group_sale_salesman" icon="fa-book">
-                        <field string="Docments" name="sale_order_count" widget="stateinfo"/>
+                        <field string="Docments" name="sale_order_count" widget="statinfo"/>
                     </button>
                 </xpath>
                 <field name="type" position="attributes">
@@ -339,7 +341,7 @@
 
 
     <menuitem name="Kids Care"  id="kids_root_menu" web_icon="kids_ care,static/description/icon.png"/>
-    <!-- <menuitem name="Registers" id="register_menu" action="register_action" parent="kids_root_menu" sequence="1"/> -->
+<!--    <menuitem name="Registers" id="register_menu" action="register_action" parent="kids_root_menu" sequence="1"/>-->
     <menuitem name="Students" id="student_menu" action="student_action" parent="kids_root_menu" sequence="2"/>
     <menuitem name="Financial" id="fin_menu" parent="kids_root_menu" sequence="4"/>
     <menuitem name="Costs" id="class_menu" action="costs_action" parent="fin_menu" sequence="5"/>
