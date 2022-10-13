@@ -63,7 +63,7 @@ class Registers(models.Model):
                     raise UserError("this child can,t go to next level")
             elif order.order_line[0].name == 'Second Level':
                 if order.partner_id.age >= 5:
-                    send_sms_url = sms_url + "السيد ولي أمر الطفل / الطفلة :\n " + order.partner_id.name + " \nروضة كيدس كير الخاصة ترحب بكم في عاملها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً" + "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
+                    send_sms_url = sms_url + "السيد ولي أمر الطفل / الطفلة : " + order.partner_id.name + " \nروضة كيدس كير الخاصة ترحب بكم في عاملها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً" + "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
                     result = requests.get(send_sms_url)
                     order.partner_id.write({'stage': 'second'})
                     order.state = 'sale'
