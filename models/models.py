@@ -47,7 +47,7 @@ class Registers(models.Model):
         for order in  self:
             if order.order_line[0].name == 'Buds':
                 if order.partner_id.age >= 2:
-                    send_sms_url = sms_url + "السيد ولي أمر الطفل / الطفلة :\n " + order.partner_id.name +" \nروضة كيدس كير الخاصة ترحب بكم في عاملها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً"+ "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
+                    send_sms_url = sms_url + "السيد ولي أمر الطفل/الطفلة:" + order.partner_id.name +" \nروضة كيدس كير الخاصة ترحب بكم في عامها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً"+ "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
                     result = requests.get(send_sms_url)
                     order.partner_id.write({'stage': 'buds'})
                     order.state = 'sale'
@@ -55,7 +55,7 @@ class Registers(models.Model):
                     raise UserError("this child is too small to enter kindergaten")
             elif order.order_line[0].name == 'First Level':
                 if order.partner_id.age >= 4:
-                    send_sms_url = sms_url + "السيد ولي أمر الطفل / الطفلة :\n " + order.partner_id.name + " \nروضة كيدس كير الخاصة ترحب بكم في عاملها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً" + "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
+                    send_sms_url = sms_url + "السيد ولي أمر الطفل/الطفلة:" + order.partner_id.name + " \nروضة كيدس كير الخاصة ترحب بكم في عامها الدراسي الجديد ونتمنى لطفلكم عاما دراسياً وترفيهيا موفقاً" + "&numbers=" + order.partner_id.phone + "&sender=KIDS CARE"
                     result = requests.get(send_sms_url)
                     order.partner_id.write({'stage': 'first'})
                     order.state = 'sale'
