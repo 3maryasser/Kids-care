@@ -12,5 +12,9 @@
             <field name="name">Second Level</field>
             <field name="isclass">True</field>
         </record>
+        <record id="trans" model="product.template">
+            <field name="name">Transportation</field>
+            <field name="isclass">False</field>
+        </record>
     </data>
 </odoo>
