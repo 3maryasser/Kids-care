@@ -16,5 +16,9 @@
             <field name="name">Transportation</field>
             <field name="isclass">False</field>
         </record>
+        <record id="trans_one" model="product.template">
+            <field name="name">Transportation One Way</field>
+            <field name="isclass">False</field>
+        </record>
     </data>
 </odoo>

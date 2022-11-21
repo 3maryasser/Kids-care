@@ -150,9 +150,9 @@ class Students(models.Model):
     #     else:
     #         raise UserError("this child can,t go to next level")
 
-    # @api.depends("stage")
-    # def action_reset(self):
-    #     self.stage = 'a'
+    @api.depends("stage")
+    def action_reset(self):
+        self.stage = 'a'
 
 
 

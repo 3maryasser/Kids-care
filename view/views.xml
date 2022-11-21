@@ -12,6 +12,15 @@
             <field name="context">{'group_by': 'stage'}</field>
             <field name="domain">[('user_ids','=',False),('ref_company_ids','=',False)]</field>
             <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create" style="color:#8403fc; font-family:Times New Roman">
+                Click to create a new Student For kindergarten
+                </p>
+                <h1>
+                    <div class="fa fa-users fa-6x" style="color:#3a0880;"/>
+                </h1>
+                <p style="color:#032cfc;">This is List Of all Students and Classes</p>
+            </field>
         </record>
         <record id="costs_action" model="ir.actions.act_window">
             <field name="name">Costs</field>
@@ -139,7 +148,7 @@
 <!--                </tree>-->
 <!--            </field>-->
 <!--        </record>-->
-        <!-- <record id="view_partner_tree_inherit" model="ir.ui.view">
+        <record id="view_partner_tree_inherit" model="ir.ui.view">
 			<field name="name">res.partner.inherit</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_tree"/>
@@ -150,12 +159,15 @@
                     </header>
                 </tree>
             </field>
-        </record> -->
+        </record>
         <record id="view_partner_kanban_inherit" model="ir.ui.view">
 			<field name="name">res.partner.inherit</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.res_partner_kanban_view"/>
 			<field name="arch" type="xml">
+                <kanban position="attributes" sample="1">
+                    <attribute name="sample">1</attribute>
+                </kanban>
                 <xpath expr="//kanban" position="attributes">
                     <attribute name="records_draggable">false</attribute>
                 </xpath>
@@ -171,8 +183,8 @@
                     <header>
                         <!-- <button name="action_buds" string="Buds Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('buds','first', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
                         <button name="action_level_one" string="Next Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('a','first', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
-                        <button name="action_level_two" string="last Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('buds','a', 'second'))]}" confirm="Are you sure want to take student to next level?"/>
-                        <button name="action_reset" string="Reset" type="object" class="btn btn-secondary" confirm="Are you sure want to reset kid"/> -->
+                        <button name="action_level_two" string="last Level" type="object" class="oe_highlight" attrs="{'invisible': [('stage', 'in', ('buds','a', 'second'))]}" confirm="Are you sure want to take student to next level?"/> -->
+                        <button name="action_reset" string="Reset" type="object" class="btn btn-secondary" confirm="Are you sure want to reset kid"/>
                         <field name="stage" widget="statusbar"/>
                     </header>
                 </xpath>
@@ -332,6 +344,9 @@
                 <field name="partner_id" position="replace">
                     <field name="partner_id" widget="res_partner_many2one" nolabel="1" domain="[('is_child','=',False)]" context="{                                             'res_partner_search_mode': (context.get('default_move_type', 'entry') in ('out_invoice', 'out_refund', 'out_receipt') and 'customer') or (context.get('default_move_type', 'entry') in ('in_invoice', 'in_refund', 'in_receipt') and 'supplier') or False,                                             'show_address': 1, 'default_is_company': True, 'show_vat': True,'default_is_child': False}" options="{&quot;always_reload&quot;: True, &quot;no_quick_create&quot;: True}" attrs="{'invisible': [('move_type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
                 </field>
+                <xpath expr="//button[@name='button_draft']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
             </field>
         </record>
 
@@ -340,7 +355,7 @@
 
 
 
-    <menuitem name="Kids Care"  id="kids_root_menu" web_icon="kids_ care,static/description/icon.png"/>
+    <menuitem name="Kids Care"  id="kids_root_menu" web_icon="kids_ care,static/description/icon.png" sequence="-10"/>
 <!--    <menuitem name="Registers" id="register_menu" action="register_action" parent="kids_root_menu" sequence="1"/>-->
     <menuitem name="Students" id="student_menu" action="student_action" parent="kids_root_menu" sequence="2"/>
     <menuitem name="Financial" id="fin_menu" parent="kids_root_menu" sequence="4"/>
